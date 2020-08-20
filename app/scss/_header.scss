@@ -1,0 +1,239 @@
+.header {
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	z-index: 20;
+	width: 100%;
+
+	/* класс, добавляющийся при скролле  */
+	&.scrolled {
+		background-color: rgba(0, 0, 0, 0.85) !important;
+		transition: background-color 200ms linear;
+	}
+
+	&__top {}
+
+	&__burger {
+		position: absolute;
+		right: 0;
+
+		@media (min-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__bottom {}
+
+	&__menu {}
+}
+
+.header-top {
+
+	&__inner {
+		position: relative;
+		height: 50px;
+		border-bottom: 1px solid #fff;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			border-bottom: 0;
+		}
+	}
+
+	&__column {
+		display: flex;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			margin-right: 50px;
+
+			&:first-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__link {
+		color: #fff;
+		font-size: 12px;
+		margin-right: 45px;
+		transition: all 0.3s;
+
+		span {
+			margin-left: 15px;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $green;
+			}
+		}
+
+		@media (max-width: 768px) {
+			flex: 0 0 25px;
+			margin-right: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: $green;
+
+
+			span {
+				display: none;
+			}
+		}
+	}
+
+	&__basket,
+	&__user {
+		width: 25px;
+		height: 25px;
+		border-radius: 50%;
+		background-color: #fff;
+		font-size: 12px;
+		color: $blue;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.3s;
+
+		&:hover {
+			color: #fff;
+			background-color: $blue;
+		}
+	}
+
+	&__basket {
+		margin-right: 12px;
+		position: relative;
+	}
+
+	&__number {
+		position: absolute;
+		top: -5px;
+		left: 17px;
+		min-width: 15px;
+		height: 15px;
+		background: $green;
+		border-radius: 50px;
+		color: #fff;
+
+		padding: 3px;
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.header-bottom {
+	&__inner {
+		height: 80px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__logo {
+		@media (max-width: 768px) {
+			width: 60px;
+			margin-right: 15px;
+		}
+	}
+}
+
+.menu {
+	@media (max-width: 768px) {
+		body.lock {
+			overflow: hidden;
+		}
+		position: fixed;		
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		padding-top: 30px;
+		padding-left: 30px;
+		transform: translateX(100%);
+		transition: all 0.8s;
+
+		&.active {
+			display: block;
+			transform: translateX(0);
+			width: 100%;
+			height: 100%;
+			background-color: black;
+			opacity: 0.85;			
+		}
+
+		
+	}
+
+	&__list {}
+
+	&__item {
+		display: inline-block;
+		margin-left: 50px;
+
+		@media (max-width: 768px) {
+			display: block;
+			margin-left: 0;
+		}
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	&__link {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #fff;
+		position: relative;
+		transition: all 0.3s;
+		padding: 10px 0;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 0;
+			height: 2px;
+			background-color: $blue;
+			transition: all 0.3s;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: $blue;
+
+				&::after {
+					left: 0;
+					width: 100%;
+				}
+			}
+		}
+
+		&--active {
+			color: $blue;
+		}
+
+		&:active {
+			text-shadow: 1px 1px 1px $blue;
+		}
+
+		@media (max-width: 768px) {
+			width: 100%;
+			font-size: 25px;
+		}
+	}	
+}

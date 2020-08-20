@@ -1,0 +1,26 @@
+$blue: #00aeef;
+$green: #86c724;
+$violet: #9655c7;
+$bg: #2c3e50;
+$grey: #f9f9f9;
+$text: #616161;
+
+@mixin font400 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+@mixin font600 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+
+@mixin font700 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+}
+
+@mixin font800 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 800;
+}
