@@ -1,0 +1,130 @@
+.services {
+	background-color: $grey;
+
+	&__inner {
+		padding: 115px 0;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		max-width: 370px;
+		width: 100%;	
+	}
+
+	&__image {
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		width: 370px;
+		height: 275px;
+		position: relative;
+	}
+
+	&__date {
+		position: absolute;
+		left: 18px;
+		bottom: 15px;
+		color: #fff;
+		font-size: 14px;
+		@include font600;
+		text-transform: uppercase;
+		padding: 14px 18px;
+		border-radius: 2px;
+		background-color: $blue;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+			}
+		}
+	}
+
+	&__content {
+		flex: 1 1 auto;
+		padding: 34px 25px 0;
+	}
+
+	&__name {}
+
+	&__title {
+		font-size: 18px;
+		line-height: 28px;
+		@include font600;
+		padding: 15px 0;
+		border-bottom: 1px solid rgb(237, 237, 237);
+	}
+
+	&__text {
+		padding-top: 15px;		
+		line-height: 27px;
+		p {
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__footer {
+		padding: 30px 25px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__link {
+		font-size: 14px;
+		text-transform: uppercase;
+		@include font600;
+		color: $blue;
+		padding: 12px 18px;
+		border-radius: 2px;
+		background-color: $grey;
+		@media (min-width: 992px) {
+			&:hover {
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+				color: #fff;
+			}
+		}	
+	}
+
+	&__items {
+		margin-right: 35px;
+	}
+
+	&__comment,
+	&__share {
+		cursor: pointer;
+		color: #333;
+		background-color: $grey;
+		border: 1px solid transparent;
+		outline: transparent;
+		border-radius: 2px;
+		font-size: 14px;
+		padding: 10px;
+		@media (min-width: 992px) {
+			&:hover {
+				color: #fff;
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);			
+			}
+			&:focus,
+			&:active {
+				border: 1px solid $blue;
+			}
+		}	
+	}
+	&__comment {
+		margin-right: 10px;
+	}
+
+	&__number {
+		margin-left: 5px;
+	}
+}

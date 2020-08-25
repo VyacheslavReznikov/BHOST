@@ -19,6 +19,9 @@
 
 	&__column {
 		padding-left: 5px;
+		@media (max-width: 768px) {
+			flex: 0 1 50%;
+		}
 		@media (max-width: 576px) {
 			flex: 1 1 100%;
 		}
@@ -29,14 +32,22 @@
 	}
 
 	&__text {
+		display: block;
 		max-width: 155px;
 		margin-bottom: 50px;
 		font-size: 13px;
 		line-height: 23px;
+		@media (max-width: 576px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__box {
 		margin-bottom: 50px;
+
+		@media (max-width: 576px) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__title {
@@ -125,7 +136,9 @@
 
 		@media (max-width: 768px) {
 			flex-direction: column;
+			justify-content: space-around;
 		}
+	
 	}
 
 	&__copy {
@@ -147,6 +160,10 @@
 		@media (max-width: 768px) {
 			order: 1;
 			width: 100%;
+			text-align: center;
+		}
+		@media (max-width: 576px) {
+		padding-top: 10px;
 			text-align: left;
 		}
 	}

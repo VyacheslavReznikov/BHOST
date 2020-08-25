@@ -1,0 +1,52 @@
+.best {
+	background-color: $grey;
+
+	&__inner {
+		padding: 115px 0;
+
+	}
+
+	&__label {}
+
+	&__row {
+		padding-top: 45px;
+		display: flex;
+	}
+
+	&__column {
+		flex: 0 0 290px;
+		padding: 30px 20px;
+		text-align: center;	
+		border-right: 1px dotted $blue;
+		&:last-child {
+			border: none;
+		}
+	
+	}
+
+	&__image {
+		font-size: 45px;
+		margin-bottom: 30px;
+
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 18px;
+		@include font600;
+		margin-bottom: 20px;
+		color: #333;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 27px;
+	}
+}
+
+.icon-bg {
+	background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	display: initial;
+}

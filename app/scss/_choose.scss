@@ -1,0 +1,106 @@
+.choose {
+
+	&__inner {
+		padding: 115px 0;
+	}
+
+	&__label {}
+
+	&__tabs {}
+}
+
+.tabs {
+
+	&__controls {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__btn {
+		flex: 1;
+		cursor: pointer;
+		padding: 25px 10px;
+		text-transform: uppercase;
+		color: #333;
+		font-size: 15px;
+		@include font600;
+		background-color: $grey;
+		border: 1px solid transparent;
+		border-radius: 2px;
+		margin-right: 1px;
+		transition: all 0.5s;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: #fff;
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+			}
+		}
+
+		&.active {
+			color: #fff;
+			background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+		}
+	}
+
+	&__body {}
+
+	&__content {
+		padding-top: 50px;
+		display: none;
+
+		&:first-child {
+			display: block;
+		}
+
+		&.active {
+			display: block;
+		}
+	}
+}
+
+.tabs-content {
+
+	&__row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__column {
+		&:first-child {
+			flex: 1 1 auto;
+		}
+		&:last-child {
+			flex: 0 0 340px;
+		}
+	}
+
+	&__title {
+		font-size: 20px;
+		@include font600;
+		margin-bottom: 30px;
+	}
+
+	&__body {
+		padding-right: 45px;
+		text-align: justify;
+	}
+
+	&__text {
+		font-size: 15px;
+		line-height: 27px;
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image {}
+}
+
+.active-tab {}

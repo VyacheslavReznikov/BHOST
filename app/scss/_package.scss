@@ -1,0 +1,158 @@
+.package {
+
+	&__inner {
+		padding: 115px 0;
+	}
+
+	&__label {
+		margin-bottom: 70px;
+	}
+
+	&__slider {
+		.slick-dots {
+			padding-top: 70px;
+			display: flex;
+
+			li {
+				margin-right: 10px;
+				font-size: 0;
+
+				button {
+					cursor: pointer;
+					width: 14px;
+					height: 14px;
+					outline: transparent;
+					background-color: #fff;
+					border: 1px solid $blue;
+				}
+
+				&.slick-active button {
+					background-color: $blue;
+				}
+			}
+		}
+	}
+
+	&__wrapper {}
+
+	&__item {}
+
+	&__row {
+		display: flex;
+	}
+
+	&__info {
+		flex: 1 1 auto;
+		padding-right: 100px;
+	}
+
+	&__image {
+		flex: 0 1 500px;
+
+		img {
+			display: block;
+			height: 340px;
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		@include font600;
+		font-size: 24px;
+		color: #333;
+		margin-bottom: 25px;
+	}
+
+	&__box {}
+
+	&__box-row {
+		display: flex;
+		align-items: center;
+	}
+
+	&__box-column {
+		flex: 0 0 33.333%;
+		position: relative;
+	}
+
+	&__box-icon {
+		font-size: 100px;
+	}
+
+	&__box-price {
+		position: absolute;
+		left: 30px;
+		bottom: 25px;
+		font-size: 40px;
+		@include font700;
+		color: #fff;
+	}
+
+	&__box-list {}
+
+	&__box-item {
+		padding-left: 20px;
+		position: relative;
+		margin-bottom: 10px;
+
+		&::before {
+			content: '\f00c';
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			font-family: "Font Awesome 5 Free";
+			font-weight: 900;
+			font-size: 13px;
+			color: #d9d9d9;
+		}
+	}
+
+	&__box-text {
+		line-height: 27px;
+		text-align: justify;
+		margin-bottom: 40px;
+	}
+
+	&__box-link {
+		text-transform: uppercase;
+		color: $blue;
+		border: 1px solid $blue;
+		padding: 15px 25px;
+		border-radius: 2px;
+		transition: all 0.3s;
+
+		@media (min-width: 992px) {
+			&:hover {
+				color: #fff;
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+			}
+		}
+	}
+
+	&__arrow {
+		cursor: pointer;
+		font-size: 20px;
+		color: $blue;
+		border: 1px solid transparent;
+		outline: transparent;
+		background-color: #fff;
+		border-radius: 2px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		&:focus,
+		&:active {
+			border: 1px solid $blue;
+		}
+
+		&--prev {
+			left: -80px;
+		}
+
+		&--next {
+			right: -80px;
+		}
+	}
+}

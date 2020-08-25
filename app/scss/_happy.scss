@@ -1,0 +1,123 @@
+.happy {
+
+	&__inner {
+		padding: 115px 0;
+	}
+
+	&__label {
+		margin-bottom: 70px;
+	}
+
+	&__slider {
+		.slick-dots {
+			text-align: center;
+			margin-top: 30px;
+
+			li {
+				display: inline-block;
+				margin: 0 5px;
+
+				button {
+					cursor: pointer;
+					font-size: 0;
+					width: 18px;
+					height: 18px;
+					border-radius: 50%;
+					border: 1px dotted transparent;
+					outline: transparent;
+					background-color: #fff;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					position: relative;
+
+					&::before {
+						content: '';
+						position: absolute;
+						width: 13px;
+						height: 13px;
+						border-radius: 50%;
+						border: 1px dotted $violet;
+					}
+				}
+
+				&.slick-active button {
+					border: 1px dotted $violet;
+
+					&::before {
+						border: 1px dotted transparent;
+						background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+					}
+				}
+			}
+		}
+	}
+
+	&__wrapper {}
+
+	&__item {
+		text-align: center;
+		background-image: url(../images/happy-bg.png);
+		background-repeat: no-repeat;
+		background-position: center 20px;
+		position: relative;
+	}
+
+	&__image {
+		display: inline-block;
+		width: 92px;
+		height: 92px;
+		border-radius: 50%;
+		overflow: hidden;
+
+		img {
+			max-width: 100%;
+		}
+
+		&--bl {
+			position: absolute;
+			bottom: 0;
+			left: 11%;
+		}
+
+		&--ml {
+			position: absolute;
+			top: 20%;
+			left: 25%;
+		}
+
+		&--mr {
+			position: absolute;
+			top: 20%;
+			right: 25%;
+		}
+
+		&--br {
+			position: absolute;
+			bottom: 0;
+			right: 11%;
+		}
+	}
+
+	&__name {
+		font-size: 18px;
+		@include font600;
+		margin-bottom: 10px;
+	}
+
+	&__job {
+		margin-bottom: 50px;
+	}
+
+	&__decor {
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		line-height: 27px;
+		max-width: 610px;
+		margin: 0 auto;
+		font-style: italic;
+	}
+}

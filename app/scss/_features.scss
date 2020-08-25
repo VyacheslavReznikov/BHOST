@@ -1,0 +1,52 @@
+.features {
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+
+	&__inner {
+		padding: 170px 0 180px;
+		position: relative;
+		z-index: 2;
+		color: #fff;
+	}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		text-align: center;
+	}
+
+	&__image {
+		position: relative;
+		display: inline-block;
+		margin-bottom: 30px;
+	}
+
+	&__bg {
+		font-size: 60px;
+	}
+
+	&__icon {
+		color: $blue;
+		font-size: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	&__number {
+		font-size: 40px;
+		@include font600;
+		margin-bottom: 20px;
+	}
+
+	&__name {
+		font-size: 24px;
+		@include font600;
+		text-transform: uppercase;
+	}
+}
