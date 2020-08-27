@@ -2,16 +2,32 @@
 
 	&__inner {
 		padding: 115px 0;
+
+		@media (max-width: 992px) {
+			padding: 50px 0;
+		}
+
+		@media (max-width: 576px) {
+			padding: 30px 0;
+		}
 	}
 
 	&__label {
 		margin-bottom: 70px;
+		@media (max-width: 576px) {
+			margin-bottom: 30px;
+		}	
 	}
 
 	&__slider {
 		.slick-dots {
 			padding-top: 70px;
 			display: flex;
+
+			@media (max-width: 1200px) {
+				padding-top: 40px;
+				justify-content: center;
+			}
 
 			li {
 				margin-right: 10px;
@@ -39,20 +55,42 @@
 
 	&__row {
 		display: flex;
+		@media (max-width: 992px) {
+			flex-direction: column;
+		}	
 	}
 
 	&__info {
 		flex: 1 1 auto;
 		padding-right: 100px;
+
+		@media (max-width: 1200px) {
+			padding-right: 50px;
+		}
+		@media (max-width: 992px) {
+			order: 2;
+			padding-right: 0;
+		}	
+	
 	}
 
 	&__image {
 		flex: 0 1 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;	
 
-		img {
-			display: block;
-			height: 340px;
+		@media (max-width: 1200px) {
+			flex: 0 0 300px;
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
+		@media (max-width: 992px) {
+			order: 1;
+		}	
 	}
 
 	&__title {
@@ -66,13 +104,21 @@
 	&__box {}
 
 	&__box-row {
-		display: flex;
+		display: flex;		
 		align-items: center;
+		@media (max-width: 576px) {
+			display: block;
+			margin: 0 auto;
+			
+		}	
 	}
 
 	&__box-column {
 		flex: 0 0 33.333%;
 		position: relative;
+		@media (max-width: 576px) {
+			margin-bottom: 20px;
+		}	
 	}
 
 	&__box-icon {
@@ -129,6 +175,8 @@
 			}
 		}
 	}
+
+	&__controls {}
 
 	&__arrow {
 		cursor: pointer;

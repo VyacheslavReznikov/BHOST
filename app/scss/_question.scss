@@ -5,6 +5,10 @@
 		padding: 115px 100px;
 
 		@media (max-width: 992px) {
+			padding: 50px 0;
+		}
+
+		@media (max-width: 576px) {
 			padding: 30px 0;
 		}
 	}
@@ -15,7 +19,7 @@
 		margin-bottom: 75px;
 
 		@media (max-width: 576px) {
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 		}
 	}
 
@@ -55,6 +59,10 @@
 		@media (max-width: 992px) {
 			display: flex;
 		}
+		@media (max-width: 576px) {
+			flex-direction: column;
+			margin-bottom: 30px;
+		}	
 	}
 
 	&__btn {
@@ -125,6 +133,10 @@
 	&__answer {
 		line-height: 27px;
 		display: none;
+		@media (max-width: 576px) {
+			padding: 15px 15px 15px 25px;
+			text-align: justify;
+		}
 	}
 
 	&__query {

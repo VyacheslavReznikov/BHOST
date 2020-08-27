@@ -4,6 +4,13 @@
 	&__inner {
 		padding: 115px 0;
 
+		@media (max-width: 992px) {
+			padding: 50px 0;
+		}
+
+		@media (max-width: 576px) {
+			padding: 30px 0;
+		}
 	}
 
 	&__label {}
@@ -11,17 +18,28 @@
 	&__row {
 		padding-top: 45px;
 		display: flex;
+
+		@media (max-width: 992px) {
+			flex-wrap: wrap;
+			justify-content: space-around;	
+		}
+		@media (max-width: 576px) {
+			padding-top: 0;
+		}
 	}
 
 	&__column {
-		flex: 0 0 290px;
+		flex: 0 1 290px;
 		padding: 30px 20px;
-		text-align: center;	
+		text-align: center;
 		border-right: 1px dotted $blue;
+
 		&:last-child {
 			border: none;
 		}
-	
+		@media (max-width: 992px) {
+			border: none;
+		}
 	}
 
 	&__image {

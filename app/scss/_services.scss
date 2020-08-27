@@ -3,11 +3,20 @@
 
 	&__inner {
 		padding: 115px 0;
+
+		@media (max-width: 992px) {
+			padding: 50px 0;
+		}
+
+		@media (max-width: 576px) {
+			padding: 30px 0;
+		}
 	}
 
 	&__row {
 		display: flex;
-		justify-content: space-between;
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 
 	&__column {
@@ -15,16 +24,29 @@
 		flex-direction: column;
 		background-color: #fff;
 		max-width: 370px;
-		width: 100%;	
+		width: 100%;
+		margin-bottom: 30px;
+
+		@media (max-width: 1200px) {
+			max-width: 48%;
+		}
+
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
 	}
 
 	&__image {
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
-		width: 370px;
+		max-width: 370px;
+		width: 100%;
 		height: 275px;
 		position: relative;
+		@media (max-width: 1200px) {
+		margin: 0 auto;
+		}	
 	}
 
 	&__date {
@@ -62,10 +84,12 @@
 	}
 
 	&__text {
-		padding-top: 15px;		
+		padding-top: 15px;
 		line-height: 27px;
+
 		p {
 			margin-bottom: 5px;
+
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -87,16 +111,21 @@
 		padding: 12px 18px;
 		border-radius: 2px;
 		background-color: $grey;
+
 		@media (min-width: 992px) {
 			&:hover {
 				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
 				color: #fff;
 			}
-		}	
+		}
 	}
 
 	&__items {
 		margin-right: 35px;
+
+		@media (max-width: 576px) {
+			margin-right: 0;
+		}
 	}
 
 	&__comment,
@@ -109,17 +138,20 @@
 		border-radius: 2px;
 		font-size: 14px;
 		padding: 10px;
+
 		@media (min-width: 992px) {
 			&:hover {
 				color: #fff;
-				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);			
+				background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
 			}
+
 			&:focus,
 			&:active {
 				border: 1px solid $blue;
 			}
-		}	
+		}
 	}
+
 	&__comment {
 		margin-right: 10px;
 	}
