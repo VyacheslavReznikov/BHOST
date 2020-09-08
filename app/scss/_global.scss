@@ -114,7 +114,7 @@ a {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	align-items: center;	
+	align-items: center;
 	margin-bottom: 25px;
 
 	&__title {
@@ -180,8 +180,22 @@ a {
 	border-top: transparent;
 	outline: transparent;
 	border-radius: 5px;
+	overflow: hidden;
 
-	transition: all 0.5s;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 15px;
+		height: 100%;
+		background: #fff;
+		filter: blur(20px);
+
+		animation: light 3s linear 0.5s infinite normal none;
+	}
 
 	&:hover {
 		background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
@@ -190,5 +204,17 @@ a {
 	&:active {
 		border-bottom: transparent;
 		border-top: 1px solid #fff;
+	}
+}
+
+@keyframes light {
+	0% {
+
+		transform: translateX(-300px) skew(-30deg);
+	}
+
+	100% {
+
+		transform: translateX(500px) skew(-30deg);
 	}
 }

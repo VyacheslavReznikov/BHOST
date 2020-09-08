@@ -151,6 +151,23 @@
 		font-size: 20px;
 		@include font600;
 		margin-bottom: 25px;
+
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;		
+			width: 65%;
+			height: 65%;
+			border: 1px solid #fff;
+			border-radius: 50%;
+
+			animation: circle 2s ease-in infinite;
+		}
+
+		i {
+			animation: phone 0.8s infinite;
+		}
 	}
 
 	&__title {
@@ -253,5 +270,44 @@
 		&:active {
 			background-color: $blue;
 		}
+	}
+}
+
+@keyframes circle {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+
+	100% {
+		transform: scale(1.5);
+		opacity: 0;
+	}
+}
+
+@keyframes phone {
+	0% {
+		transform: rotate(-5deg);
+	}
+
+	30% {
+		transform: rotate(5deg);
+	}
+
+	60% {
+		transform: rotate(-5deg);
+	}
+
+	90% {
+		transform: rotate(5deg);
+	}
+
+	100% {
+		transform: rotate(0);
 	}
 }
