@@ -120,6 +120,11 @@
 		border-top-right-radius: 5px;
 		border-bottom-right-radius: 5px;
 
+		&:hover,
+		&:active {
+			background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+		}
+
 		@media (max-width: 576px) {
 			font-size: 12px;
 			padding: 0 5px;
@@ -194,6 +199,11 @@
 		background-color: $blue;
 		padding: 18px;
 		color: #fff;
+
+		&:hover,
+		&:active {
+			background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+		}
 	}
 }
 
