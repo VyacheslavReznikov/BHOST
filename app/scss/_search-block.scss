@@ -44,8 +44,13 @@
 		border: 1px solid $blue;
 		border-radius: 30px;
 		background-color: rgb(255, 255, 255);
+		outline: transparent;
 		height: 65px;
 		padding: 0 150px 0 55px;
+
+		&:focus {
+			box-shadow: inset 2px 2px 2px $green, inset -2px -2px 2px $green;
+		}
 
 		@media (max-width: 576px) {
 			padding: 0 90px 0 35px;
@@ -64,9 +69,18 @@
 		font-size: 15px;
 		@include font600;
 		text-transform: uppercase;
-		background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+		background-color: $blue;
 		border-radius: 30px;
 		border: 2px solid transparent;
+		outline: transparent;
+
+		&:hover {
+			background: linear-gradient(45deg, rgb(49, 170, 226) 0%, rgb(157, 53, 192) 100%);
+		}
+
+		&:focus {
+			border-color: $green;
+		}
 
 		i {
 			display: none;
@@ -95,10 +109,18 @@
 	}
 
 	&__checkbox {
-		display: none;
+		width: 1px;
+		height: 1px;
+		clip: rect(0 0 0 0);
+		position: absolute;
+		z-index: -1;
 
 		&:checked+.search-block__fake::after {
 			opacity: 1;
+		}
+
+		&:focus + .search-block__fake::before {
+			border-color: $green;
 		}
 	}
 
